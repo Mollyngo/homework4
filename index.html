@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* min-height: 100vh; */
+            max-width: 1092px;
+            font-family: 'Sarabun', sans-serif;
+            margin: auto;
+            padding: 1px 20px;
+        }
+
+        /* Style the header with a grey background and some padding */
+        .header {
+            overflow: hidden;
+            background-color: #cdbbbb;
+            padding: 10px 5px;
+        }
+
+        /* Style the header links */
+        .header a {
+            float: left;
+            color: black;
+            text-shadow: 2px #a99c9c;
+            text-align: center;
+            padding: 8px;
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 18px;
+            border-radius: 4px;
+        }
+
+        /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+        .header a.logo {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Change the background color on mouse-over */
+        .header a:hover {
+            background-color: #ddd;
+            color: rgb(106, 67, 67);
+        }
+
+        /* Style the active/current link
+        .header a.active {
+            background-color: dodgerblue;
+            color: white;
+        } */
+
+        /* Float the link section to the right */
+        .header-right {
+            float: right;
+        }
+
+        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+        @media screen and (max-width: 800px) {
+            .header a {
+                float: none;
+                display: block;
+                text-align: center;
+            }
+
+            .header-right {
+                float: none;
+            }
+        }
+
+        /* Change color on hover
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        } */
+
+        .Profile {
+            display: flex;
+            flex-direction: row;
+            font-size: 20px;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .Profile-left {
+            /* background-color: #f1f1f1; */
+            padding: 10 20px;
+            flex: 50%;
+        }
+
+        .Profile-right {
+            /* background-color: dodgerblue; */
+            padding: 20px;
+            flex: 50%;
+
+        }
+
+        .news {
+            background-color: #d3bdbd;
+            padding: 25px 10px;
+
+
+        }
+
+        .downl {
+            font-size: 16px;
+            padding: 5px;
+            border: 3px solid saddlebrown;
+            border-radius: 15%;
+            background-color: #f7dada;
+
+
+        }
+
+        .pic img {
+
+            margin: auto;
+            padding: 5px;
+            height: auto;
+            width: 300px;
+            height: 250px;
+            border-radius: 70%;
+            align-items: center;
+        }
+
+        /* Responsive layout - makes a one column-layout instead of two-column layout */
+        @media (max-width: 800px) {
+            .Profile {
+                flex-direction: column-reverse;
+            }
+        }
+
+
+        .recent {
+
+            min width 800px;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            font-size: 18px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .recent-left {
+            background-color: #fdfcfc;
+            padding: 10px;
+            flex: 50%;
+            margin: 10px;
+        }
+
+        .recent-right {
+            background-color: rgb(254, 254, 254);
+            padding: 10px;
+            flex: 50%;
+            margin: 10px;
+        }
+
+        /* Responsive layout - makes a one column-layout instead of two-column layout */
+        @media (max-width: 800px) {
+            .recent {
+                flex-direction: column;
+            }
+        }
+
+        .featured {
+           padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+.year{
+    background-color: #cdbbbb;
+border: 1px solid sienna;
+
+}
+.detial{
+text-shadow: #a99c9c;
+
+}
+        .card {
+            display: flex;
+            /* justify-content:space-evenly; */
+            padding: 5px;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        @media (max-width: 800px) { .card {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+      
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <!-- <a href="#default" class="logo">CompanyLogo</a> -->
+        <div class="header-right">
+            <a class="active" href="#home">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
+
+    <div class="Profile">
+        <div class="Profile-left">
+            <h2>Hi,I am Mon
+                <br>Creative Technologist<br><br>
+
+            </h2>
+            <h4>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione unde deleniti, eligendi beatae!
+            </h4>
+            <br>
+            <button class="downl">Download Resume</button>
+
+        </div>
+        <div class="Profile-right">
+            <div class="pic">
+                <img src="https://buffer.com/cdn-cgi/image/w=300,fit=contain,q=90,f=auto/library/content/images/size/w600/2023/10/free-images.jpg"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="recentbox">
+        <!-- <h1>Responsive Flexbox</h1> -->
+        <div class="news">
+            <h2>Recent post</h2>
+
+            <div class="recent">
+
+                <div class="recent-left">
+
+                    <div class="Recent1">
+                        <h3>a design system from sctatch</h3>
+                        <strong>12 Feb 2020 | Design,Pattern </strong>
+                        <br><br>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos facere incidunt ex harum
+                            voluptatibus.
+                            Qui neque, ducimus necessitatibus, tempore autem quisquam repudiandae unde et iste ea
+                            consequatur
+                            nihil dignissimos optio non quia temporibus sequi officia ullam quas molestias. Voluptatum
+                            cumque
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+                <div class="recent-right">
+                    <div class="Recent2">
+                        <h3>a design system from sctatch</h3>
+                        <strong>12 Feb 2020 | Design,Pattern </strong>
+                        <br><br>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos facere incidunt ex harum
+                            voluptatibus.
+                            Qui neque, ducimus necessitatibus, tempore autem quisquam repudiandae unde et iste ea
+                            consequatur
+                            nihil dignissimos optio non quia temporibus sequi officia ullam quas molestias. Voluptatum
+                            cumque
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    </div>
+    <div class="featured">
+        <h2>Featured works</h2>
+        <div class="card">
+            <div class="cimage">
+                <img src="https://picsum.photos/id/99/200/150" alt="" />
+            </div>
+            <div class="ccontent">
+                <h3>Designing Dashboards</h3>
+                <div class="detail">
+                    <p class="year">2020</p>
+                   <h4>Dashboard</h4>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                    nisi eligendi quia illo ullam facere nulla saepe ad hic, magnam
+                    ducimus animi minus pariatur minima quis recusandae vel fugiat
+                    non.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cimage">
+                <img src="https://picsum.photos/id/88/200/150" alt="" />
+            </div>
+            <div class="ccontent">
+                <h3>Vibrant Portraits of 2020</h3>
+                <div class="detail">
+                    <p class="year">2020</p>
+<h4>illustration</h4>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                    nisi eligendi quia illo ullam facere nulla saepe ad hic, magnam
+                    ducimus animi minus pariatur minima quis recusandae vel fugiat
+                    non.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cimage">
+                <img src="https://picsum.photos/id/77/200/150" alt="" />
+            </div>
+            <div class="ccontent">
+                <h3>36 Days of Malayalam type</h3>
+                <div class="detail">
+                    <p class="year">2020</p>
+               <h4>Typography</h4>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                    nisi eligendi quia illo ullam facere nulla saepe ad hic, magnam
+                    ducimus animi minus pariatur minima quis recusandae vel fugiat
+                    non.
+                </p>
+            </div>
+        </div>
+
+</body>
+
+</html>
